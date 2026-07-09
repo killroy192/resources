@@ -1,0 +1,34 @@
+---
+description: Organize code by **feature** using the `bulletproof-react` pattern.
+globs: **/.{jsx,tsx}
+alwaysApply: false
+---
+
+*   **One Component Per File**: Except for small, pure, stateless components closely related to a parent.
+*   **Naming**:
+    *   Components: `PascalCase` (e.g., `UserProfile.tsx`)
+    *   Custom Hooks: `use` prefix + `PascalCase` (e.g., `useAuth.ts`)
+    *   Functions/Variables: `camelCase`
+    *   CSS Classes: `kebab-case` (via CSS Modules or utility classes)
+
+### ✅ GOOD: Feature-based structure
+```
+src/
+├── features/
+│   ├── auth/
+│   │   ├── components/
+│   │   │   ├── LoginForm.tsx
+│   │   │   └── AuthButton.tsx
+│   │   ├── hooks/
+│   │   │   └── useAuth.ts
+│   │   └── api/auth.ts
+│   └── products/
+│       ├── components/
+│       │   ├── ProductCard.tsx
+│       │   └── ProductList.tsx
+│       └── hooks/useProducts.ts
+├── components/ui/  // Reusable, generic UI components
+│   ├── Button.tsx
+│   └── Modal.tsx
+└── App.tsx
+```
