@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "Atlassian": {
+      "url": "https://mcp.atlassian.com/v1/mcp"
+    },
+    "miro-mcp": {
+      "url": "https://mcp.miro.com/",
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
