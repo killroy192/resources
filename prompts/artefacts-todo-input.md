@@ -96,18 +96,18 @@ Content:
 
 Good ue case shape:
 
-• Specific team workflow: not “use AI for tests.”
-• Clear before/after process step.
-• Risk and verification described up front.
-• Small enough to be tried by a real team.
+- Specific team workflow: not “use AI for tests.”
+- Clear before/after process step.
+- Risk and verification described up front.
+- Small enough to be tried by a real team.
 
 ### Evaluation
 
-Use case quality: real, specific, relevant
-Impact / risk / effort scoring
-Workflow pattern selection
-Value stream map / process integration
-Actionability and prioritized next steps
+- Use case quality: real, specific, relevant
+- Impact / risk / effort scoring
+- Workflow pattern selection
+- Value stream map / process integration
+- Actionability and prioritized next steps
 
 ## Artifact 5
 
