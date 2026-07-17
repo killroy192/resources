@@ -1,5 +1,5 @@
 ---
-name: generate-context-map
+name: generate-verification-plan
 description: Turns a spec, context map and implementation plan into a structured verification plan. Use when the user asks to create a verification plan
 disable-model-invocation: true
 ---

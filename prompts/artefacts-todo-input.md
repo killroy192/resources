@@ -94,7 +94,7 @@ Content:
 - Verification approach.
 - Value stream map.
 
-Good ue case shape:
+Good use case shape:
 
 - Specific team workflow: not “use AI for tests.”
 - Clear before/after process step.

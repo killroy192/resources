@@ -1,10 +1,10 @@
 ---
-name: generate-plan
+name: generate-plan-tdd
 description: Turns spec into a structured implementation plan. Use when the user asks to create a plan or uses plan mode.
 disable-model-invocation: true
 ---
 
-# Generate Spec
+# Generate Plan (TDD)
 
 Use Plan Mode to produce **.md file only** — a structured implementation plan. Another agent uses plan and spec (already created) to create a context map and verification plan.
 
@@ -32,7 +32,7 @@ Use Plan Mode to produce **.md file only** — a structured implementation plan.
 Before planning:
 
 - inspect relevant files
-- ask blocking tehnical questions if needed
+- ask blocking technical questions if needed
 The plan must include:
 - confirmed facts
 - assumptions

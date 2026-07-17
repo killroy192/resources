@@ -1,6 +1,6 @@
 ---
 description: Organize code by **feature** using the `bulletproof-react` pattern.
-globs: **/.{jsx,tsx}
+globs: **/*.{jsx,tsx}
 alwaysApply: false
 ---
 
