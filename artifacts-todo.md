@@ -139,3 +139,32 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 - [ ] Is it release-ready: notes, observability/flag decision, rollout thinking?
 - [ ] Is rollback / risk control covered?
 - [ ] Was scope kept disciplined and the result maintainable?
+
+---
+
+## Demo Video — 10-minute walkthrough
+
+After your five artifacts are done, record a **~10-minute screen walkthrough**. Open your repo, show the files, talk through what you built. No slides, no formal intro — just show the work.
+
+**Record with Teams** (start a meeting with yourself) or any tool that gives an auto-transcript. Don't edit the transcript with an agent — we check.
+
+### Structure (10 minutes)
+
+- [ ] **0:00–2:00 · Artifact 1 — your AI toolkit.** Open your repo and show your tools. For each: what it does and when it's used. Skills/commands ("handles X, I invoke it when…"), rules ("runs passively whenever the agent touches [area]"), AGENTS.md (open it, point out 2–3 things and why the agent needs them).
+- [ ] **2:00–4:00 · Artifact 2 — agents.** Show your agent/sub-agent setup: read the title line, show the chain if it calls others, show one example running (screenshot, formatted chat log, or quick live demo).
+- [ ] **4:00–6:00 · Artifact 3 — agentic workflow (the main one).** Show the evidence chain: spec (business problem + what "done" looks like), plan (steps, TDD checkpoints / human approval gates), context package (hot/warm/cold if you have a context map), checks & review (one verification output — what you kept, what you fixed). **Connect back to Artifact 1** — point to where your tools actually showed up.
+- [ ] **6:00–7:30 · Artifact 4 — AI in your SDLC.** Walk your 5 use cases fast, one sentence each. Call out any case where AI improves something *other* than writing code, or where you use AI to build a deterministic tool you later remove AI from.
+- [ ] **7:30–9:30 · Artifact 5 — the deliverable (actual code).** Show it running or ready to merge: the PR/diff, tests passing (screenshot is fine), release notes + rollback plan (one sentence each on risk and rollback).
+- [ ] **9:30–10:00 · One thing you'd do differently.** Optional, but likely a Viva question. If you have a genuine one, say it; otherwise end at 9:30.
+
+### Before you record
+
+- [ ] Repo is open, files load fast — no hunting around during the video
+- [ ] You can show the implementation ran (PR, diff, or test output)
+- [ ] You know which 1–2 moments in Artifact 3 directly use tools from Artifact 1
+- [ ] One practice run out loud — 9:30–10:00 is the sweet spot
+
+### Quick reminders
+
+- **Show the file, don't describe it.** "Here's my skill" while pointing at a bullet list ≠ opening the skill file.
+- **The thread matters.** The same story runs through all 5 — we check that what you built in Artifact 1 actually appears in Artifact 3.
