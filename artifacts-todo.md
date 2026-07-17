@@ -168,4 +168,3 @@ After your five artifacts are done, record a **~10-minute screen walkthrough**. 
 
 - **Show the file, don't describe it.** "Here's my skill" while pointing at a bullet list ≠ opening the skill file.
 - **The thread matters.** The same story runs through all 5 — we check that what you built in Artifact 1 actually appears in Artifact 3.
-- **Skip the apologies.** "This is still a bit rough" wastes time. Just show what you have.
