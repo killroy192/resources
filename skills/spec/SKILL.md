@@ -36,7 +36,7 @@ Copy and track progress:
 ```
 Spec generation:
 - [ ] Step 1 — Read story description and explore available resources
-- [ ] Step 2 - Ask questions about taks. Try to understand business context and use-case scenarious as detailed as possible.
+- [ ] Step 2 - Ask questions about task. Try to understand business context and use-case scenarios as detailed as possible.
 - [ ] Step 3 — Write structured spec from story
 - [ ] Step 4 — Critique and Self-check (no implementation leakage)
 ```

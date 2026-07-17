@@ -4,7 +4,7 @@ description: Turns a feature spec and implementation plan into a structured cont
 disable-model-invocation: true
 ---
 
-# Generate Spec
+# Generate Context Map
 
 Produce **.md file only** — a structured context map. Another agent uses these as part of implementation context package.
 

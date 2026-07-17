@@ -1,10 +1,10 @@
 ---
-name: generate-plan
+name: generate-refactoring-plan
 description: Turns spec into a structured refactoring implementation plan. Use when the user asks to create a refactoring plan.
 disable-model-invocation: true
 ---
 
-# Generate Spec
+# Generate Refactoring Plan
 
 Use Plan Mode. This is a refactor of <target>. Do not edit any files — produce a plan only. Observable behavior must remain unchanged.
 
@@ -23,7 +23,7 @@ Refactoring task description
 
 | Artefact | Default path |
 |----------|----------------|
-| Implementation Plan | `docs/<feature-slug>.refactroing-plan.md` |
+| Implementation Plan | `docs/<feature-slug>.refactoring-plan.md` |
 
 ---
 
@@ -32,7 +32,7 @@ Refactoring task description
 Before planning:
 
 - inspect relevant files
-- ask blocking tehnical questions if needed
+- ask blocking technical questions if needed
 
 The plan must include:
 
