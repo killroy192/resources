@@ -25,9 +25,9 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 ### Self-check before submitting
 
 - [ ] Are the rules short, scoped, actionable and non-conflicting?
-- [ ] Does AGENTS.md give a project map, conventions and repo operation guidance?
+- [ ] Does AGENTS.md provides valuable context that need to be loaded for every agent working in this repo, like project map comments, conventions and repo operation guidance?
 - [ ] Is the SKILL.md workflow repeatable, with inputs, outputs and "when to use"?
-- [ ] Is everything reusable and maintainable, not one-off?
+- [ ] Is everything reusable, maintainable and shareable, not one-off?
 - [ ] Is the evidence clean — links, locations and structure easy to follow?
 
 ---
