@@ -1,11 +1,8 @@
 # Portal AI Use Case Playbook (A4)
 
-**From:** five AS-IS **Findings** · [`as-is-value-stream.md`](as-is-value-stream.md) / SVG  
-**Metrics:** [`LBMH.Services.Portal-SDLC.json`](LBMH.Services.Portal-SDLC.json) · **2026-06-16 → 2026-07-16** · adequacy **93** · pulled **2026-07-16**  
-**Exemplar:** LBMH20-386 Dev+Prod App **29594/29598** + Api **29595/29599** ✅ · [PR 9220](https://dev.azure.com/ECI-LBMH/LBMH-Spruce/_git/LBMH.Services.Portal/pullrequest/9220)  
-**Copies:** `dmares/artifacts/a4-use-case-playbook/` · `.portal-work/LBMH20-386/`
+**Metrics:** [`LBMH.Services.Portal-SDLC.json`](LBMH.Services.Portal-SDLC.json)
 
-Findings = diagnosis. Use cases = prescription (before→after + proof).  
+Use cases = prescription (before→after + proof).  
 Ratings **H/M/L:** Impact · Risk · Effort (one Portal squad).
 
 ---
