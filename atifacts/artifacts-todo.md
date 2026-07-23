@@ -9,18 +9,9 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 ### To do
 
 - [ ] Create a `.cursor/rules` file (or `.cursor/rules/*.mdc` files) with project rules
-  - [ ] Keep each rule short, scoped and actionable
-  - [ ] Make sure rules don't conflict with each other
-- [ ] Create `AGENTS.md` (or equivalent project guidance) containing:
-  - [ ] A project map (what lives where)
-  - [ ] Coding conventions
-  - [ ] How to operate the repo (build, run, test)
-- [ ] Create at least one `SKILL.md` describing a repeatable workflow:
-  - [ ] Steps to follow
-  - [ ] Inputs and outputs
-  - [ ] When to use it
-- [ ] (Optional) Add a slash command
-- [ ] Organize the evidence: clear file locations, working links, tidy structure
+- [ ] Create `AGENTS.md` (or equivalent project guidance)
+- [ ] Create at least one `SKILL.md` describing a repeatable workflow
+- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact1-tools/artifact.basic.template.md` as a basic example (modify according your needs)
 
 ### Self-check before submitting
 
@@ -32,25 +23,13 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 
 ---
 
-## Artifact 2 — Custom Subagent or MCP Integration
+## Artifact 2 — Custom Subagent and MCP Integration
 
 ### To do
 
 - [ ] Pick a **real workflow problem** (not a demo for demo's sake)
-- [ ] Build one custom subagent or MCP integration for it
-- [ ] Place the files in the expected locations:
-  - [ ] `.cursor/agents/` (for a subagent) or `.cursor/mcp.json` (for MCP)
-  - [ ] `/evidence/agent-or-mcp.md` (documentation)
-  - [ ] Example output or demo note
-- [ ] In the documentation, cover:
-  - [ ] Purpose and use case
-  - [ ] Clear responsibility and scope
-  - [ ] Allowed tools
-  - [ ] Forbidden actions
-  - [ ] Read/write boundary
-  - [ ] Human approval gates
-  - [ ] Security / data notes
-- [ ] Capture working evidence: chat logs and a safe demo output
+- [ ] Build one custom subagent and MCP integration for it
+- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact2-mcp-subagents/artifact.basic.template.md` as a basic example (modify according your needs)
 
 ### Self-check before submitting
 
@@ -68,10 +47,10 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 ### To do
 
 - [ ] Start from an original work item / story and save it
-- [ ] Write an AI-ready spec from the story
+- [ ] Create an AI-ready spec from the story
 - [ ] Run Plan Mode and save the plan output
 - [ ] Create a context map (which files/docs the AI needed and why)
-- [ ] Review the plan as a human and write review notes
+- [ ] Review the plan as a human and save review notes
 - [ ] Document the human decisions you made (what you accepted, changed, rejected — and why)
 - [ ] Implement and open a PR; save the PR link
 - [ ] Collect tests/checks evidence
@@ -89,7 +68,30 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 
 ---
 
-## Artifact 4 — Prioritized AI Use Cases for Your Team
+## Artifact 4 — Ship It (Working Result + Release Readiness)
+
+### To do
+
+- [ ] Produce a working result: PR link, demo link, deployment note or deployability note
+- [ ] Include the implementation diff
+- [ ] Collect tests/checks evidence (automated checks and/or manual QA)
+- [ ] Write review notes: summary, blockers, anything missing
+- [ ] Write release notes, including a rollback plan if needed
+- [ ] Document known risks and limitations
+- [ ] Record the final merge or deployability decision
+
+### Self-check before submitting
+
+- [ ] Does the working result exist and match the spec?
+- [ ] Does the verification evidence prove the key behavior?
+- [ ] Is it review-ready: summary, blockers, missing evidence, final decision?
+- [ ] Is it release-ready: notes, observability/flag decision, rollout thinking?
+- [ ] Is rollback / risk control covered?
+- [ ] Was scope kept disciplined and the result maintainable?
+
+---
+
+## Artifact 5 — Prioritized AI Use Cases for Your Team
 
 ### To do
 
@@ -116,29 +118,6 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 - [ ] Does the chosen workflow pattern fit each use case?
 - [ ] Does the value stream map show real process integration?
 - [ ] Are the next steps actionable and prioritized?
-
----
-
-## Artifact 5 — Ship It (Working Result + Release Readiness)
-
-### To do
-
-- [ ] Produce a working result: PR link, demo link, deployment note or deployability note
-- [ ] Include the implementation diff
-- [ ] Collect tests/checks evidence (automated checks and/or manual QA)
-- [ ] Write review notes: summary, blockers, anything missing
-- [ ] Write release notes, including a rollback plan if needed
-- [ ] Document known risks and limitations
-- [ ] Record the final merge or deployability decision
-
-### Self-check before submitting
-
-- [ ] Does the working result exist and match the spec?
-- [ ] Does the verification evidence prove the key behavior?
-- [ ] Is it review-ready: summary, blockers, missing evidence, final decision?
-- [ ] Is it release-ready: notes, observability/flag decision, rollout thinking?
-- [ ] Is rollback / risk control covered?
-- [ ] Was scope kept disciplined and the result maintainable?
 
 ---
 
