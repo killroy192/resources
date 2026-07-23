@@ -12,37 +12,29 @@
 |-------|----------|-----------------|
 | Story | {original work item} | `{link}` |
 | Spec | AI-ready spec | `{path}` |
-| Spec creation review/chat logs | exported session | `{link}` |
+| Spec chat logs | exported session | `{path}` |
 | Plan | Plan Mode output | `{path}` |
-| Plan review/chat logs | exported session | `{link}` |
+| Plan chat logs | exported session | `{path}` |
 | Context map | hot/warm/cold files | `{path}` |
 | Verification | AC↔evidence table | `{path}` |
-| Review notes | human review + decisions | `{path}` |
-| PR | implementation | `{PR link}` |
+| Plan and spec review notes | human review + decisions | `{path}` |
 
 ---
 
 ### Verification
 
-> Convincing evidence the key behaviour works. Tie each AC to proof.
+> Convincing evidence the key behaviour works. Tie each AC to proof collected locally
 
 | AC | Proof (test name / manual step) | Result |
 |----|--------------------------------|--------|
 | AC-1 | {evidence} | {pass / gap} |
 
-- **Command(s) run:** `{command}`
-- **Output:** `{link or paste location}`
-
 ---
 
 ### Human decisions & review notes
 
-> Document what you accepted, changed, rejected — and why. This is where human judgement is visible.
+> Document what you accepted, changed, rejected — and why, on each step: spec, plan. This is where human judgement is visible.
 
 | Decision | Accepted / Changed / Rejected | Why |
 |----------|-------------------------------|-----|
 | {decision} | {choice} | {reasoning} |
-
-- **Review summary:** {overall verdict on the plan/implementation}
-
----
