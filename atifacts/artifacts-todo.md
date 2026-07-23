@@ -55,6 +55,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 - [ ] Implement the change and verify it locally
 - [ ] Collect verification evidence: tie each AC to proof (test name / manual step), collected locally
 - [ ] Export/save the chat logs from the spec and plan sessions
+- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact3-workflow/artifact.basic.template.md` as a basic example (modify according your needs)
 
 ### Self-check before submitting
 
@@ -80,6 +81,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 - [ ] Document known risks and limitations
 - [ ] Record the final merge or deployability decision
 - [ ] Export/save the chat logs
+- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact4-deliverables/artifact.basic.template.md` as a basic example (modify according your needs)
 
 ### Self-check before submitting
 
@@ -123,6 +125,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
   - [ ] Order by Impact · Risk · Effort (high impact + low risk + low effort first)
   - [ ] Give each a measurable "Done when…" exit criterion
   - [ ] Sequence dependencies explicitly (no gate enabled before its prerequisite)
+  - [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact5-ai-use-cases/**.md` as a basic example (modify according your needs)
 
 ### Self-check before submitting
 
