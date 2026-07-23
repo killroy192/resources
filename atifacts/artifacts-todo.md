@@ -107,7 +107,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
   - [ ] Required context (what the AI needs to know)
   - [ ] Verification approach
 - [ ] Prioritize the use cases
-- [ ] Create a value stream map showing where the use cases fit in the process
+- [ ] Create a value stream map showing where the use cases fit in the process (JSON file)
 
 ### Self-check before submitting
 

@@ -1,0 +1,814 @@
+{
+  "name": "LBMH.Services.Portal SDLC",
+  "note": "Physical feedback path for LBMH.Services.Portal. LOCK: numbers here = as-is-value-stream.md = Portal-AS-IS-Value-Stream.svg = Findings/UCs in ai-use-case-playbook.md. PRIMARY metrics window 2026-06-16 to 2026-07-16 (~30d, inclusive of LBMH20-386 Dev+Prod deploy day) - adequacy 93 vs 14d=62 / 7d=35. Code-review processingTime = 30d excl-<5m median (~2.8h, n=8) - not all-PR ~63s. Deploy is Manual via deploy skill (ADO Deploy.LBMH.Services.Portal.Api=440, App=472, Infra=441) - not CI-on-merge. App 472 0% fail med ~74s (33/33); Api 440 0% fail med ~616s (45/45) - live ADO pull 2026-07-16. AWS Dev CFN ~293s; Prod CFN ~295s (stage=app; CFN corroboration pulled 2026-07-15). Graded pack is this JSON + as-is md/svg + playbook md only.",
+  "details": {
+    "generalInformation": {
+      "repository": "LBMH.Services.Portal",
+      "repositoryId": "29c34b97-0862-4802-b63c-c2d9acaef2f9",
+      "adoProject": "LBMH-Spruce",
+      "adoOrganization": "ECI-LBMH",
+      "defaultBranch": "main",
+      "deploySkill": ".cursor/skills/deploy/SKILL.md",
+      "pipelineDefinitionIds": {
+        "api": 440,
+        "infrastructure": 441,
+        "qualityCheck": 445,
+        "app": 472,
+        "appLegacyUnused": 471,
+        "staleGlobalProd": 468
+      },
+      "pipelineYaml": {
+        "api": "Deploy.LBMH.Services.Portal.Api.yaml",
+        "infrastructure": "Deploy.LBMH.Services.Portal.Infrastructure.yaml",
+        "app": "Deploy.LBMH.Services.Portal.App.yaml",
+        "qualityCheck": "QualityCheck.yaml",
+        "ciOrphanInRepo": "build.yaml (trigger: main; no active definition using this file in current ADO defs)"
+      },
+      "documentation": [
+        ".cursor/skills/deploy/SKILL.md",
+        ".cursor/rules/portal-pipelines.mdc",
+        ".cursor/rules/portal-local-dev.mdc",
+        "README.md"
+      ],
+      "metricsWindow": "2026-06-16 to 2026-07-16 (~30d) - PRIMARY (includes LBMH20-386 Dev+Prod deploy day)",
+      "metricsWindowSecondary": "2026-07-02 to 2026-07-16 (14d) corroboration; 2026-07-09 to 2026-07-16 (7d) too thin for review SLA",
+      "metricsAdequacyScores": {
+        "d30": 93,
+        "d14": 62,
+        "d7": 35
+      },
+      "metricsPulledAt": "2026-07-16",
+      "metricsSource": [
+        "ADO completed PRs to main closed in window (n=24)",
+        "ADO pipeline runs defs 440 / 441 / 445 / 472 - full re-pull 2026-07-16 (finishTime in window; status=completed)",
+        "LBMH20-386 exemplar Deploy Dev+Prod 2026-07-16: App 29594/29598 + Api 29595/29599 (commit 5192cf4a, PR 9220)",
+        "AWS CloudFormation user-initiated UPDATE history (dev + prod stacks) - corroboration pulled 2026-07-15",
+        "Local workstation timings sample 2026-07-15"
+      ],
+      "deployMechanism": "Cursor deploy skill → ADO pipelines_run_pipeline (440 Api / 472 App / 441 Infra). Manual per env (Dev then Prod). trigger:none in YAML. Def names: Deploy.LBMH.Services.Portal.Api (440), Deploy.LBMH.Services.Portal.App (472).",
+      "metricsSummary": {
+        "prCompletionAutoPipelines": "none - merge to main does not queue 440/441/445/472 (Manual reason=1 on all sampled deploy/QC runs)",
+        "branchPoliciesOnMain": "none (az repos policy list returned [])",
+        "deployPipelines": {
+          "app472": {
+            "definitionName": "Deploy.LBMH.Services.Portal.App",
+            "definitionId": 472,
+            "yaml": "Deploy.LBMH.Services.Portal.App.yaml",
+            "runs": 33,
+            "succeeded": 33,
+            "failed": 0,
+            "failRatePercent": 0,
+            "medianDurationSec": 74,
+            "reason": "Manual",
+            "byAccount": {
+              "Spruce-Next Dev": {
+                "runs": 19,
+                "failed": 0,
+                "failRatePercent": 0,
+                "medianDurationSec": 74
+              },
+              "Spruce-Next Production": {
+                "runs": 14,
+                "failed": 0,
+                "failRatePercent": 0,
+                "medianDurationSec": 74
+              }
+            },
+            "verifiedAt": "2026-07-16",
+            "note": "Live ADO pull 2026-07-16 for window 2026-06-16..2026-07-16. Includes LBMH20-386 Dev #29594 (~97s) + Prod #29598 (~272s). Prior lock (ending 07-15) was 31/31."
+          },
+          "api440": {
+            "definitionName": "Deploy.LBMH.Services.Portal.Api",
+            "definitionId": 440,
+            "yaml": "Deploy.LBMH.Services.Portal.Api.yaml",
+            "runs": 45,
+            "succeeded": 45,
+            "failed": 0,
+            "failRatePercent": 0,
+            "medianDurationSec": 616,
+            "reason": "Manual",
+            "byAccount": {
+              "Spruce-Next Dev": {
+                "runs": 26,
+                "failed": 0,
+                "failRatePercent": 0,
+                "medianDurationSec": 608
+              },
+              "Spruce-Next Production": {
+                "runs": 19,
+                "failed": 0,
+                "failRatePercent": 0,
+                "medianDurationSec": 628
+              }
+            },
+            "awsDevCorroboration": "CFN UPDATE on dev-spruce-portal-service-stack median ~293s (~4.9m) for CDK phase alone; full ADO Api includes docker/ECR (~10m total)",
+            "verifiedAt": "2026-07-16",
+            "note": "Live ADO pull 2026-07-16: 45/45 succeeded in window. Includes LBMH20-386 Dev #29595 (~674s) + Prod #29599 (~835s). Prior lock (ending 07-15) was 43/43."
+          },
+          "infrastructure441": {
+            "runs": 17,
+            "succeeded": 14,
+            "failed": 3,
+            "failRatePercent": 17.6,
+            "medianDurationSec": 585,
+            "byAccount": {
+              "Spruce-Next Dev": {
+                "runs": 13,
+                "failed": 3,
+                "failRatePercent": 23.1,
+                "medianDurationSec": 463
+              },
+              "Spruce-Next Production": {
+                "runs": 4,
+                "failed": 0,
+                "failRatePercent": 0,
+                "medianDurationSec": 710
+              }
+            },
+            "note": "No 441 runs on 2026-07-16 (LBMH20-386 used App+Api only). Prod Infra n=4 still thin; Dev n=13 usable. ADO fails can be pre-CFN (ChangeSet)."
+          },
+          "qualityCheck445": {
+            "runs": 15,
+            "succeeded": 3,
+            "failed": 12,
+            "failRatePercent": 80,
+            "medianDurationSec": 669,
+            "reason": "Manual",
+            "dominantFailureMode": "Coverlet line coverage gate <90% on Api.Tests (build 29300: 488 passed, 87.72% line)"
+          }
+        },
+        "awsDevStack": {
+          "accountId": "503561451195",
+          "stack": "dev-spruce-portal-service-stack",
+          "ecsService": "lbmhportal",
+          "cluster": "spruce-fargate-cluster",
+          "window30d": {
+            "userInitiatedCfnUpdates": 32,
+            "cfnFailRatePercent": 0,
+            "medianCfnUpdateSec": 293,
+            "medianCfnUpdateDisplay": "~4.9m"
+          },
+          "latestEcsRolloutSecApprox": 263,
+          "source": "AWS CFN history (dev account) pulled 2026-07-15"
+        },
+        "awsProdStack": {
+          "accountId": "140023376801",
+          "awsProfile": "prod",
+          "stage": "app",
+          "stack": "app-spruce-portal-service-stack",
+          "ecsService": "lbmhportal",
+          "cluster": "spruce-fargate-cluster",
+          "window30d": {
+            "userInitiatedCfnUpdates": 22,
+            "succeeded": 22,
+            "cfnFailRatePercent": 0,
+            "medianCfnUpdateSec": 295,
+            "avgCfnUpdateSec": 270,
+            "minCfnUpdateSec": 82,
+            "maxCfnUpdateSec": 400,
+            "medianCfnUpdateDisplay": "~4.9m"
+          },
+          "window14d": {
+            "userInitiatedCfnUpdates": 12,
+            "cfnFailRatePercent": 0,
+            "medianCfnUpdateSec": 295
+          },
+          "window7d": {
+            "userInitiatedCfnUpdates": 3,
+            "cfnFailRatePercent": 0,
+            "medianCfnUpdateSec": 295
+          },
+          "latestEcsRolloutSecApprox": 257,
+          "latestEcsRollout": {
+            "created": "2026-07-15T09:08:10.192000-05:00",
+            "completed": "2026-07-15T09:12:27.275000-05:00",
+            "approxSec": 257,
+            "rolloutState": "COMPLETED"
+          },
+          "source": "AWS CFN history (prod account) pulled 2026-07-15",
+          "pulledAt": "2026-07-15",
+          "note": "Prod SSO profile prod → account 140023376801. CFN User-Initiated UPDATE cycles on app-spruce-portal-service-stack. Corroborates ADO Prod Api med ~628s (CFN ~295s is CDK/ECS portion only)."
+        },
+        "pullRequestsToMain": {
+          "sampleSize": 24,
+          "bkohnSharePercent": 75,
+          "source": "ADO completed → main (same list as Portal pullrequests?_a=completed)",
+          "all": {
+            "medianOpenSec": 63,
+            "medianOpenDisplay": "~63s",
+            "averageOpenSec": 37558,
+            "averageOpenDisplay": "~10.4h",
+            "p90OpenSec": 152078,
+            "p90OpenDisplay": "~42h",
+            "openUnder5MinCount": 16,
+            "openOver1DayCount": 3
+          },
+          "exclUnder5Min_reviewish": {
+            "sampleSize": 8,
+            "medianOpenSec": 10177,
+            "medianOpenDisplay": "~2.8h",
+            "averageOpenSec": 112567,
+            "averageOpenDisplay": "~31.3h"
+          },
+          "nonBkohn": {
+            "sampleSize": 6,
+            "medianOpenSec": 83244,
+            "medianOpenDisplay": "~23.1h",
+            "note": "Collaborative / non-owner path - useful for 'team review' narrative"
+          },
+          "longestOpenHours": [
+            {
+              "pr": 8764,
+              "hours": 146.22,
+              "author": "mbarbachan"
+            },
+            {
+              "pr": 9220,
+              "hours": 52.39,
+              "author": "dmares"
+            },
+            {
+              "pr": 8906,
+              "hours": 42.24,
+              "author": "dsousa"
+            }
+          ],
+          "sdlcCodeReviewProcessingTimeSec": 10177,
+          "sdlcCodeReviewProcessingTimeDisplay": "~2.8h",
+          "note": "PRIMARY code-review processingTime = 30d excl-<5m median (~2.8h, n=8). All-PR med ~63s is owner-merge skew. Do not use 14d/7d for review SLA. Window rolled to include 2026-07-16."
+        },
+        "localWorkstation2026_07_15": {
+          "dotnetBuildApiDebugSec": 15.4,
+          "dotnetTestDataTestsSec": 4.3,
+          "npmRunBuildWebSec": 27,
+          "exitCodes": {
+            "build": 0,
+            "dataTests": 0,
+            "webBuild": 0
+          }
+        },
+        "commonFailureModes": [
+          "QualityCheck 445 (30d): ~80% fail - Coverlet <90% line while tests pass (29300)",
+          "Infrastructure 441 Dev (30d): 23.1% fail - e.g. CDK ChangeSet does not exist (28327); CFN completed updates themselves show 0% fail in AWS",
+          "Deploy path depends on human memory - forgotten post-merge deploy leaves AWS behind main"
+        ],
+        "asIsFindings": [
+          "F1 Don't skip the written spec (Spec->Jira or Jira->Spec both OK) -> UC-1",
+          "F2 Human review ~2.8h/~3h is pretty good; optional Lore + /pre-pr-review -> UC-2",
+          "F3 No required PR checks; Sonar NOT on /deploy -> UC-4 Hard Sonar gate (Sonar + lint + >=90%) (ONLY Sonar UC)",
+          "F4 Coverlet ~87.7% blocks UC-4 Hard Sonar gate for now -> UC-3 Story AC proof (verification.md) NOW + UC-4 Phase A hygiene (not a 2nd Sonar UC)",
+          "F5 Manual post-merge deploy -> auto Dev 472/440 on merge; Prod Manual; no default 441 -> UC-5"
+        ],
+        "recommendedUseCases": [
+          "UC-1 Don't skip the written spec (/portal-spec) (F1)",
+          "UC-2 Lore + /pre-pr-review before Ready; humans still merge (F2)",
+          "UC-3 Story AC proof (verification.md): scoped tests that prove this story's ACs (NOT Sonar, NOT a coverage %) (F4)",
+          "UC-4 Hard Sonar gate (Sonar + lint + >=90%): hygiene then require on PR (F3,F4)",
+          "UC-5 Auto-queue Dev 472/440 on merge; Prod Manual; never default 441 (F5)"
+        ],
+        "latestDeployExemplarLBMH20_386": {
+          "date": "2026-07-16",
+          "commit": "5192cf4a",
+          "pr": 9220,
+          "package": "App 472 + Api 440 (no Infra 441)",
+          "runs": [
+            {
+              "id": 29594,
+              "definitionId": 472,
+              "awsAccount": "Spruce-Next Dev",
+              "result": "succeeded",
+              "durationSec": 97,
+              "url": "https://dev.azure.com/ecisolutions/LBMH-Spruce/_build/results?buildId=29594"
+            },
+            {
+              "id": 29595,
+              "definitionId": 440,
+              "awsAccount": "Spruce-Next Dev",
+              "result": "succeeded",
+              "durationSec": 674,
+              "url": "https://dev.azure.com/ecisolutions/LBMH-Spruce/_build/results?buildId=29595"
+            },
+            {
+              "id": 29598,
+              "definitionId": 472,
+              "awsAccount": "Spruce-Next Production",
+              "result": "succeeded",
+              "durationSec": 272,
+              "url": "https://dev.azure.com/ecisolutions/LBMH-Spruce/_build/results?buildId=29598"
+            },
+            {
+              "id": 29599,
+              "definitionId": 440,
+              "awsAccount": "Spruce-Next Production",
+              "result": "succeeded",
+              "durationSec": 835,
+              "url": "https://dev.azure.com/ecisolutions/LBMH-Spruce/_build/results?buildId=29599"
+            }
+          ],
+          "note": "Human-confirmed smoke after Dev+Prod. Proves Finding 5 path is healthy when run; still Manual (UC-5 opportunity)."
+        }
+      }
+    },
+    "technologies": {
+      "custom": [
+        ".NET 10 ASP.NET Core API (ECS Fargate)",
+        "React + Vite + Fluent UI v9 (S3 / CloudFront)",
+        "AWS CDK (C#) - ECS, API Gateway v2, CloudFront, DynamoDB, Lambda",
+        "Azure DevOps Pipelines (ubuntu-latest)",
+        "Okta OIDC / JWT",
+        "SQL Server (SpruceLicensing, SpruceMetrics, DBPushUpdates, DevOpsWarehouse)",
+        "SonarCloud + Mend (QualityCheck.yaml - when run)",
+        "Coralogix / OpenTelemetry (observability)"
+      ]
+    },
+    "tools": {
+      "custom": [
+        "Cursor deploy skill → pipelines_run_pipeline 440/441/472",
+        "dotnet run -launch-profile http (local, port 5000 - not Docker Compose)",
+        "npm run build / test:ci (Web → Api/wwwroot)",
+        "dotnet test (Api.Tests, Data.Tests, CDK.Tests)",
+        "az / ADO MCP for pipeline+PR telemetry",
+        "QualityCheck 445 (manual Sonar/Mend/tests - often red)",
+        "SystemTest.yaml (system-test template; not primary CD path)"
+      ]
+    }
+  },
+  "states": [
+    {
+      "name": "State#0",
+      "activities": [],
+      "details": {
+        "custom": []
+      },
+      "transitions": [],
+      "metrics": {}
+    },
+    {
+      "name": "Developer's laptop",
+      "activities": [
+        {
+          "name": "Story analysis / Portal Jira track (optional AI)",
+          "negativeFeedbackFrequency": "",
+          "note": "/portal-spec → plan → /portal-context → schema → implement → verify → /pre-pr-review. Bootcamp path for LBMH20-386; team may still use informal Jira→code.",
+          "precision": "",
+          "processingTime": "",
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        },
+        {
+          "name": "Local coding / implementation",
+          "negativeFeedbackFrequency": "",
+          "note": "API + React SPA + optional CDK. No ADO gate on laptop.",
+          "precision": "",
+          "processingTime": "",
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        },
+        {
+          "name": "dotnet build Api (Debug)",
+          "negativeFeedbackFrequency": "0",
+          "note": "dmares sample 2026-07-15: 15.4s exit 0 (warm).",
+          "precision": "80",
+          "processingTime": 15,
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        },
+        {
+          "name": "dotnet test (scoped / Data.Tests)",
+          "negativeFeedbackFrequency": "0",
+          "note": "dmares sample Data.Tests 4.3s exit 0. Full solution / npm test:ci can exit 1 (pre-existing; documented on LBMH20-386).",
+          "precision": "70",
+          "processingTime": 4,
+          "details": {
+            "custom": []
+          },
+          "flagged": true
+        },
+        {
+          "name": "npm run build (Web → Api/wwwroot)",
+          "negativeFeedbackFrequency": "0",
+          "note": "dmares sample 27s exit 0. Required before local API serves SPA.",
+          "precision": "80",
+          "processingTime": 27,
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        },
+        {
+          "name": "dotnet run local (http://localhost:5000)",
+          "negativeFeedbackFrequency": "",
+          "note": "Real Okta + SQL on 127.0.0.1,1434/1435. Docker Compose is CI/prod scaffolding only.",
+          "precision": "",
+          "processingTime": "",
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        }
+      ],
+      "note": "Inner-loop processing ~46s for build+scoped tests+web build on sample machine. Full suite may fail for coverage / env reasons even when story scopes pass.",
+      "details": {
+        "custom": []
+      },
+      "transitions": [
+        {
+          "to": "PR",
+          "trigger": "On-demand",
+          "guard": "Pull request opened targeting main",
+          "details": {
+            "custom": []
+          }
+        },
+        {
+          "to": "QualityCheck (manual)",
+          "trigger": "On-demand",
+          "guard": "Developer queues LBMH.Services.Portal.QualityCheck (445) - optional, not branch policy",
+          "details": {
+            "custom": []
+          }
+        }
+      ],
+      "metrics": {
+        "totalProcessingTime": 46,
+        "negativeFeedbackFrequency": ""
+      }
+    },
+    {
+      "name": "PR",
+      "activities": [
+        {
+          "name": "Code review (human)",
+          "negativeFeedbackFrequency": "",
+          "note": "30d (2026-06-16..07-16): 24 PRs→main from ADO completed list. All-PR med ~63s (16/24 <5m). Excl <5m n=8: med 10177s (~2.8h) - used here. Non-bkohn med ~23h (n=6). Outliers 8764 ~146h, 9220 ~52h, 8906 ~42h.",
+          "precision": "75",
+          "processingTime": 10177,
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        },
+        {
+          "name": "Optional /pre-pr-review agent gate",
+          "negativeFeedbackFrequency": "",
+          "note": "Cursor orchestrated specialists; used for LBMH20-386. Not an ADO required check.",
+          "precision": "",
+          "processingTime": "",
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        },
+        {
+          "name": "ADO build-validation / required status checks",
+          "negativeFeedbackFrequency": "",
+          "note": "No branch policies configured on repository (empty policy list). QualityCheck is not a PR gate.",
+          "precision": "100",
+          "processingTime": 0,
+          "details": {
+            "custom": []
+          },
+          "flagged": true
+        }
+      ],
+      "note": "PR targets main. Completion does not auto-start deploy pipelines. Code-review processingTime = 30d excl-<5m median (~2.8h).",
+      "details": {
+        "custom": []
+      },
+      "transitions": [
+        {
+          "to": "main branch",
+          "trigger": "automated",
+          "guard": "PR completed (merged) into main",
+          "details": {
+            "custom": []
+          }
+        }
+      ],
+      "metrics": {
+        "totalProcessingTime": 10177,
+        "negativeFeedbackFrequency": "",
+        "note": "30d reviewish median ~2.8h (n=8). See metricsSummary.pullRequestsToMain."
+      }
+    },
+    {
+      "name": "main branch",
+      "activities": [
+        {
+          "name": "Post-merge CI (build.yaml)",
+          "negativeFeedbackFrequency": "",
+          "note": "Repo contains build.yaml with trigger branches: [main], but no current ADO definition uses that path (defs point at Deploy/QualityCheck YAMLs). Effectively no automatic main CI in live pipelines.",
+          "precision": "40",
+          "processingTime": 0,
+          "details": {
+            "custom": []
+          },
+          "flagged": true
+        },
+        {
+          "name": "Human decide deploy package",
+          "negativeFeedbackFrequency": "",
+          "note": "Per deploy skill: React-only → 472; API-only → 440; both → 472+440; CDK changes → 441. Default 'deploy' runs Dev then Prod.",
+          "precision": "",
+          "processingTime": "",
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        }
+      ],
+      "note": "main is source of truth for AWS deploys, but promotion is manual.",
+      "details": {
+        "custom": []
+      },
+      "transitions": [
+        {
+          "to": "App deploy (472)",
+          "trigger": "Manual",
+          "guard": "Frontend changed OR routine App promote; awsAccount = Spruce-Next Dev|Production; deploymentColor=blue|green",
+          "details": {
+            "custom": []
+          }
+        },
+        {
+          "to": "Api deploy (440)",
+          "trigger": "Manual",
+          "guard": "API changed OR routine Api promote; awsAccount = Spruce-Next Dev|Production",
+          "details": {
+            "custom": []
+          }
+        },
+        {
+          "to": "Infrastructure deploy (441)",
+          "trigger": "Manual",
+          "guard": "CDK / infra changed (or full-stack first deploy)",
+          "details": {
+            "custom": []
+          }
+        },
+        {
+          "to": "QualityCheck (manual)",
+          "trigger": "On-demand",
+          "guard": "Someone queues 445 for Sonar/Mend/coverage - unrelated to merge event",
+          "details": {
+            "custom": []
+          }
+        }
+      ],
+      "metrics": {
+        "totalProcessingTime": 0,
+        "negativeFeedbackFrequency": "0",
+        "note": "No measured automatic post-merge pipeline in window"
+      }
+    },
+    {
+      "name": "QualityCheck (manual)",
+      "activities": [
+        {
+          "name": "Build-Test-Analyze (dotnet + Sonar/Mend templates)",
+          "negativeFeedbackFrequency": "80",
+          "note": "30d: 15 runs, ~80% fail. Median ~669s. Dominant fail: Coverlet Api line <90% while tests pass (29300).",
+          "precision": "90",
+          "processingTime": 669,
+          "details": {
+            "custom": []
+          },
+          "flagged": true
+        }
+      ],
+      "note": "Side loop - not on CD path. Optional quality signal when run; usually red.",
+      "details": {
+        "custom": []
+      },
+      "transitions": [
+        {
+          "to": "Developer's laptop",
+          "trigger": "On-demand",
+          "guard": "Fix coverage / tests / Sonar findings then re-queue",
+          "details": {
+            "custom": []
+          }
+        },
+        {
+          "to": "main branch",
+          "trigger": "On-demand",
+          "guard": "QC was informational on a branch already merged or about to merge",
+          "details": {
+            "custom": []
+          }
+        }
+      ],
+      "metrics": {
+        "totalProcessingTime": 669,
+        "negativeFeedbackFrequency": "80"
+      }
+    },
+    {
+      "name": "App deploy (472)",
+      "activities": [
+        {
+          "name": "npm ci + Vite build + S3 sync (blue/green prefix)",
+          "negativeFeedbackFrequency": "0",
+          "note": "30d (live pull 2026-07-16): 33/33 succeeded. Med ~74s. Dev 0/19 fail; Prod 0/14 fail. Includes LBMH20-386 #29594/#29598. Def Deploy.LBMH.Services.Portal.App.",
+          "precision": "100",
+          "processingTime": 74,
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        }
+      ],
+      "note": "trigger: none in YAML - Manual only. Definition Deploy.LBMH.Services.Portal.App. Deploy skill typical runtime ~2-3 min including queue.",
+      "details": {
+        "custom": []
+      },
+      "transitions": [
+        {
+          "to": "Dev environment",
+          "trigger": "automated",
+          "guard": "awsAccount=Spruce-Next Dev succeeded",
+          "details": {
+            "custom": []
+          }
+        },
+        {
+          "to": "Production environment",
+          "trigger": "automated",
+          "guard": "awsAccount=Spruce-Next Production succeeded",
+          "details": {
+            "custom": []
+          }
+        }
+      ],
+      "metrics": {
+        "totalProcessingTime": 74,
+        "negativeFeedbackFrequency": "0"
+      }
+    },
+    {
+      "name": "Api deploy (440)",
+      "activities": [
+        {
+          "name": "Docker build/push ECR + CDK deploy ECS/API Gateway",
+          "negativeFeedbackFrequency": "0",
+          "note": "30d (live pull 2026-07-16): 45/45 succeeded (0%). Med ~616s (~10.3m). Dev 0% (0/26, med 608s); Prod 0% (0/19, med 628s). Includes LBMH20-386 #29595/#29599. Def Deploy.LBMH.Services.Portal.Api. AWS Dev CFN phase alone med ~293s.",
+          "precision": "95",
+          "processingTime": 616,
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        }
+      ],
+      "note": "trigger: none. Definition Deploy.LBMH.Services.Portal.Api. Does not rebuild React CDN (use 472). deploy skill typical ~11 min.",
+      "details": {
+        "custom": []
+      },
+      "transitions": [
+        {
+          "to": "Dev environment",
+          "trigger": "automated",
+          "guard": "awsAccount=Spruce-Next Dev succeeded",
+          "details": {
+            "custom": []
+          }
+        },
+        {
+          "to": "Production environment",
+          "trigger": "automated",
+          "guard": "awsAccount=Spruce-Next Production succeeded",
+          "details": {
+            "custom": []
+          }
+        }
+      ],
+      "metrics": {
+        "totalProcessingTime": 616,
+        "negativeFeedbackFrequency": "0"
+      }
+    },
+    {
+      "name": "Infrastructure deploy (441)",
+      "activities": [
+        {
+          "name": "Docker build/push + full CDK (CloudFront, API GW, ECS, S3)",
+          "negativeFeedbackFrequency": "18",
+          "note": "30d: 14/17 succeeded (17.6%). Dev 23.1% (3/13); Prod 0% (0/4, thin). Med ~585s. Job timeout up to 180m in YAML.",
+          "precision": "75",
+          "processingTime": 585,
+          "details": {
+            "custom": []
+          },
+          "flagged": true
+        }
+      ],
+      "note": "Use only when CDK changed (or first/full deploy).",
+      "details": {
+        "custom": []
+      },
+      "transitions": [
+        {
+          "to": "Dev environment",
+          "trigger": "automated",
+          "guard": "awsAccount=Spruce-Next Dev succeeded",
+          "details": {
+            "custom": []
+          }
+        },
+        {
+          "to": "Production environment",
+          "trigger": "automated",
+          "guard": "awsAccount=Spruce-Next Production succeeded",
+          "details": {
+            "custom": []
+          }
+        }
+      ],
+      "metrics": {
+        "totalProcessingTime": 585,
+        "negativeFeedbackFrequency": "18"
+      }
+    },
+    {
+      "name": "Dev environment",
+      "activities": [
+        {
+          "name": "AWS Spruce-Next Dev (CloudFront + ECS lbmhportal)",
+          "negativeFeedbackFrequency": "0",
+          "note": "30d ADO Dev: App 0% (19), Api 0% (26), Infra 23.1% (13). AWS CFN stack updates 32/32 COMPLETE in prior 30d pull (med ~293s); ECS rollout ~4-5m. Account 503561451195. LBMH20-386 Dev smoke 2026-07-16 confirmed.",
+          "precision": "85",
+          "processingTime": 293,
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        },
+        {
+          "name": "Developer / QA smoke",
+          "negativeFeedbackFrequency": "",
+          "note": "Manual. No ADO telemetry for post-deploy validation duration.",
+          "precision": "",
+          "processingTime": "",
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        }
+      ],
+      "note": "stage=dev, region default us-east-2, service connection azdo-lbmh-spruce-next-dev.",
+      "details": {
+        "custom": []
+      },
+      "transitions": [
+        {
+          "to": "Production environment",
+          "trigger": "Manual",
+          "guard": "Human re-runs same pipeline(s) with awsAccount=Spruce-Next Production (deploy skill default after Dev success)",
+          "details": {
+            "custom": []
+          }
+        }
+      ],
+      "metrics": {}
+    },
+    {
+      "name": "Production environment",
+      "activities": [
+        {
+          "name": "AWS Spruce-Next Production (CloudFront + ECS)",
+          "negativeFeedbackFrequency": "0",
+          "note": "30d ADO Prod: App 0/14, Api 0/19, Infra 0/4. AWS Prod CFN (account 140023376801, app-spruce-portal-service-stack): 22/22 COMPLETE in prior 30d pull, med ~295s (~4.9m); ECS rollout ~257s. LBMH20-386 Prod smoke 2026-07-16 confirmed. Blue/green via deploymentColor.",
+          "precision": "90",
+          "processingTime": 295,
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        },
+        {
+          "name": "Post-prod smoke / rollback readiness",
+          "negativeFeedbackFrequency": "",
+          "note": "Manual. Rollback = product revert PR + redeploy 440/472 (or 441). See a5 rollback.md for LBMH20-386 pattern.",
+          "precision": "",
+          "processingTime": "",
+          "details": {
+            "custom": []
+          },
+          "flagged": ""
+        }
+      ],
+      "note": "stage=app. Also plt (Performance) and poc (Sandbox) exist as awsAccount values but were not in the 440/472 sample rows.",
+      "details": {
+        "custom": []
+      },
+      "transitions": [],
+      "metrics": {}
+    }
+  ]
+}
