@@ -108,9 +108,9 @@
 
 **Ratings:**
 
-- Impact **H/M/L**
-- Risk **H/M/L** (why)
-- Effort **H/M/L** (what exists already)
+- Impact **S/M/L**
+- Risk **S/M/L** (why)
+- Effort **S/M/L** (what exists already)
 
 > Repeat the UC block for UC-2 … UC-N.
 

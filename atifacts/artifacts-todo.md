@@ -115,9 +115,9 @@ Work through each artifact top to bottom. Check off each box as you complete it.
   - [ ] Small enough for a real team to actually try
 - [ ] For each use case, provide:
   - [ ] Link to the Finding and station it addresses
-  - [ ] Impact rating (H/M/L)
-  - [ ] Risk rating (H/M/L)
-  - [ ] Effort rating (H/M/L)
+  - [ ] Impact rating (S/M/L)
+  - [ ] Risk rating (S/M/L)
+  - [ ] Effort rating (S/M/L)
   - [ ] Recommended AI workflow pattern
   - [ ] Required context (what the AI needs to know)
   - [ ] Verification approach (AC → test / manual step, metric baseline → target, mandatory human gate)
