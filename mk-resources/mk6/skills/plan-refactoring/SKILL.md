@@ -1,5 +1,5 @@
 ---
-name: generate-refactoring-plan
+name: refactoring-plan
 description: Turns spec into a structured refactoring implementation plan. Use when the user asks to create a refactoring plan.
 disable-model-invocation: true
 ---
