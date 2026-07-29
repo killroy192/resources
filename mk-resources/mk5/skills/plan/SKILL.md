@@ -33,5 +33,5 @@ Use Plan Mode to produce **.md file only** — a structured implementation plan.
 2. Inspect the relevant parts of the codebase.
 3. Identify the files, modules, and components involved.
 4. Ask only blocking technical questions if something cannot be determined from the codebase or specification. Otherwise, make reasonable assumptions and state them explicitly.
-5. Produce the plan. The plan should be implementation-ready, unambiguous, incremental, and focused on minimizing risk while leaving implementation details to the coding phase. Use the following structure:
+5. Produce the plan using [plan template](./plan.template.md)
 

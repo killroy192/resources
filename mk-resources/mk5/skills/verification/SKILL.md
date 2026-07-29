@@ -13,28 +13,26 @@ disable-model-invocation: true
 
 | Input | Required | Notes |
 |-------|----------|--------|
+| Feature spec | Yes | Under `docs/` or pasted in chat |
 | Feature implementation plan | Yes | Under `docs/` or pasted in chat |
-
----
-
-## Verification Gates (Dimensions)
-
-1. Spec compliance - Does the diff satisfy every acceptance criterion?
-2. Scope control - Is anything included that was not requested?
-3. Test quality - Do tests prove behavior, not just cover lines?
-4. Risk - Security, performance, data or rollout concerns?
-5. Maintainability - Would a new developer understand the change?
-6. Evidence - Can a reviewer verify without re-reading all code?
-
 ---
 
 ## Workflow
 
-1. Map each acceptance criterion to a verification method.
-2. Identify existing tests and checks that should be reused.
-3. Propose what to cover with tests if coverage is missing.
-4. Identify typecheck, lint, build and smoke commands from repository files.
-5. Flag acceptance criteria that are not directly verifiable yet.
-6. Provide action list how each verification gate will be passed (validated).
-7. At the end, do validation and provide evaluation score according to the dimensions (score 0-2).
-8. Save results.
+1. Analyze the specification, implementation plan, and code diff.
+2. Identify the repository commands for type checking, linting, building, smoke testing and code complexity analyzing.
+3. Evaluate the implementation against the following verification gates. For each gate:
+
+   * Assign a score from **0–2** (0 = fails, 1 = partially meets, 2 = fully meets).
+   * List the tools, commands, or scripts used during the evaluation (for example, the eslint command used to lint TypeScript files, the test runner used for validation, or build/typecheck commands).
+   * Briefly explain the reasoning behind the score.
+   * Describe the actions required to achieve a full score, if applicable.
+
+Verification gates:
+
+* **Specification compliance** – Does the implementation satisfy every acceptance criterion defined in the specification?
+* **Scope control** – Does the change include only what was requested, without unnecessary additions or unrelated modifications?
+* **Test quality** – Do the tests validate the expected behavior including edge cases (not just increase code coverage), and would they fail if the implementation were incorrect?
+* **Risk** – Does the change introduce any security, performance, reliability, data integrity, or rollout risks?
+* **Maintainability** – Is the implementation easy to understand, maintain, and extend for a developer unfamiliar with the codebase?
+* **Evidence** – Is there sufficient evidence (tests, logs, screenshots, or other artifacts) for a reviewer to verify the change without re-reading the entire implementation?

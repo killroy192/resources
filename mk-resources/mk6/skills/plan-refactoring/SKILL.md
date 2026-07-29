@@ -1,6 +1,6 @@
 ---
 name: refactoring-plan
-description: Turns spec into a structured refactoring implementation plan. Use when the user asks to create a refactoring plan.
+description: Turns spec or task description into a structured refactoring implementation plan. Use when the user asks to create a refactoring plan.
 disable-model-invocation: true
 ---
 
@@ -48,7 +48,7 @@ The plan must include:
 
   3. Context pack — files the implementer will need: what will change, what guards it, what to consult only if surprised, what to ignore.
 
-  4. Staged plan (TDD) — small stages, each leaving the repo green. Before moving code with no coverage, add characterization tests first. Name the check that gates each stage.
+  4. Staged plan — small stages, each leaving the repo green. Before moving code with no coverage, add characterization tests first. Name the check that gates each stage.
 
   5. Behavior verification map — every behavior from #2 mapped to how it gets verified after the refactor, including edge cases (empty inputs, error paths, flag combinations). Flag anything unverifiable.
 

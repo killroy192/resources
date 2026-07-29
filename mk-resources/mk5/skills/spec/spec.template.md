@@ -59,13 +59,7 @@ List factual requirements and constraints, including where applicable:
 
 ## Acceptance Criteria
 
-Create independently testable acceptance criteria (AC-1, AC-2, ...).
-
-Present them as a table with the following columns:
-
-ID | Acceptance Criterion | Verifiable By
-
-"Verifiable By" should contain values such as Manual Test, Automated Test, API Check, UI Check, or Integration Test.
+Create independently testable user-scenario and business focused acceptance criteria (AC-1, AC-2, ...).
 
 ## Assumptions
 
