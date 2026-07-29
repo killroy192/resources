@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 ## Hard rules
 
-- **Do not implement** — no application code, tests, config, or migrations.
+- **Do not evaluate** — create only evaluation plan.
 - **Do not propose code changes** — no diffs, snippets, pseudocode patches, or “change line X to Y”.
 
 ## Inputs
@@ -17,11 +17,17 @@ disable-model-invocation: true
 | Feature implementation plan | Yes | Under `docs/` or pasted in chat |
 ---
 
+## Output
+
+Verfication plan .md file in `docs` folder
+
+---
+
 ## Workflow
 
 1. Analyze the specification, implementation plan, and code diff.
 2. Identify the repository commands for type checking, linting, building, smoke testing and code complexity analyzing.
-3. Evaluate the implementation against the following verification gates. For each gate:
+3. Create an evaluation plan following verification gates. For each gate:
 
    * Assign a score from **0–2** (0 = fails, 1 = partially meets, 2 = fully meets).
    * List the tools, commands, or scripts used during the evaluation (for example, the eslint command used to lint TypeScript files, the test runner used for validation, or build/typecheck commands).

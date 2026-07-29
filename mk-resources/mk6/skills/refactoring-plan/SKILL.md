@@ -1,6 +1,6 @@
 ---
 name: refactoring-plan
-description: Turns spec or task description into a structured refactoring implementation plan. Use when the user asks to create a refactoring plan.
+description: Turns spec or task description into a structured implementation (refactoring) plan. Use when the user asks to create a refactoring plan.
 disable-model-invocation: true
 ---
 
@@ -21,20 +21,15 @@ Refactoring task description
 
 ## Outputs
 
-| Artefact | Default path |
-|----------|----------------|
-| Implementation Plan | `docs/<feature-slug>.refactoring-plan.md` |
+Implementation Plan
 
 ---
 
 ## Workflow
 
-Before planning:
-
-- inspect relevant files
-- ask blocking technical questions if needed
-
-The plan must include:
+1. inspect relevant files
+2.ask blocking technical questions if needed
+3. Create implementation plan with the following structure:
 
   1. Change type & goal — what kind of refactor this is, what it improves, and what's explicitly out of scope.
 
