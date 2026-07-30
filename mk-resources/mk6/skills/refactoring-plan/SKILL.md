@@ -27,8 +27,8 @@ Implementation Plan
 
 ## Workflow
 
-1. inspect relevant files
-2.ask blocking technical questions if needed
+1. Inspect relevant files
+2. Ask blocking technical questions if needed
 3. Create implementation plan with the following structure:
 
   1. Change type & goal — what kind of refactor this is, what it improves, and what's explicitly out of scope.
@@ -39,7 +39,8 @@ Implementation Plan
       - side effects (writes, events, external calls)
       - flags/config that branch behavior
       - contracts and invariants callers rely on
-      - existing tests that pin this behavior — and behaviors with no coverage
+      - existing tests that pin this behavior
+      — behaviors with no coverage
 
   3. Context pack — files the implementer will need: what will change, what guards it, what to consult only if surprised, what to ignore.
 

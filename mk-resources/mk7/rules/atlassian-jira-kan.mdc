@@ -1,0 +1,20 @@
+---
+description: Restrict Atlassian MCP to read-only Jira project KAN
+alwaysApply: true
+---
+
+# Atlassian / Jira scope
+
+When using the Atlassian MCP:
+
+- Use site / cloudId: `https://epam-team-ai-adoption.atlassian.net`
+- Scope all JQL with `project = KAN` (board: projects/KAN/boards/1)
+- Do not search or read issues outside project KAN
+- Do not call write tools (create, edit, transition, comment, worklog, links)
+- Prefer `maxResults: 10` (or equivalent limit) on Jira searches
+
+Example JQL:
+
+```
+project = KAN AND status != Done ORDER BY updated DESC
+```

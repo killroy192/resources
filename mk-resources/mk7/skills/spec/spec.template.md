@@ -42,20 +42,12 @@ Do not include implementation steps, code, pseudocode, algorithms, diffs, or des
 
 ## Non-functional Requirements and Constraints
 
-List factual requirements and constraints, including where applicable:
+This section is intended to establish the boundaries the implementation must respect, not to document the architecture in depth. Include only points that:
 
-- Technology stack
-- Existing architectural patterns
-- Compatibility requirements
-- Data limitations
-- Performance
-- Scalability
-- Reliability
-- Security
-- Accessibility
-- Testing expectations
-- Existing tests that must continue to pass
-- Only include facts or explicitly stated requirements—not personal recommendations.
+  1. define technology stack and implementation constraints;
+  2. prevent integration issues;
+  3. help avoid operational or maintenance problems; or
+  4. are mandatory architectural requirements that the implementation must follow
 
 ## Acceptance Criteria
 
