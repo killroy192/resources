@@ -21,6 +21,12 @@ Analyze a change (diff, PR, or feature) and produce a Release Strategy document 
 | Diff / PR / branch / feature description | Yes | What is being released |
 | Target environment or rollout constraints | No | e.g. multi-tenant, self-hosted, single deploy |
 
+## Outputs
+
+| Artefact | Default path |
+|----------|----------------|
+| Release note | `docs/<feature-slug>.release-note.md` |
+
 ---
 
 ## Workflow
@@ -43,16 +49,13 @@ Give the subagent the diff/branch/feature scope and ask it to return, with file/
 - **Blast radius**: changed files/modules/services, their dependents, existing test coverage.
 - **Impact checklist**, each answered `true`/`false` + one-line comment with evidence:
   1. Affects critical/core functionality (auth, billing, primary data write paths)?
-  2. Affects data integrity (migrations, irreversible writes, backfills)?
-  3. Backward compatible (API contracts, DB schema, config defaults)?
+  2. Touches multiple user-facing surfaces at once (web, API, mobile, bot, etc.)?
+  3. Affects data integrity and backward compatibility (migrations, irreversible writes, backfills)?
   4. Affects security posture (authn/authz, secrets, input validation, CORS)?
   5. Affects performance/scalability (hot paths, added latency, N+1 queries)?
   6. Affects third-party/external contracts (webhooks, integrations, sync protocols)?
   7. Cleanly reversible without data loss?
   8. Covered by existing automated tests (unit/integration/e2e)?
-  9. Requires a database migration?
-  10. Touches multiple user-facing surfaces at once (web, API, mobile, bot, etc.)?
-- Add any other question relevant to this specific change, same true/false + comment format.
 
 ### Step 2: Metrics — delegate research, then synthesize
 
@@ -76,7 +79,7 @@ Judgment call based on Step 1's blast radius/impact — do not delegate:
 
 ### Step 5: Save the document
 
-Write the result to `docs/releases/<change-slug>.md` using the template below, then confirm the path to the user.
+Write the result to `docs/<change-slug>.releases-note.md` using the template below, then confirm the path to the user.
 
 ---
 
