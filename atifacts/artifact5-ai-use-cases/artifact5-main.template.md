@@ -69,28 +69,27 @@
 | **UC-…** | {title} | F… | {station} | | | |
 
 > For each UC use the block below. Delete guidance comments in the real doc.
+> Estimations: H - high, M - medium, L - low
 
 ### UC-1 — {title}
 
 - **Where:** {station from JSON}
 - **Finding:** {F1}
 - **Title means:** {one sentence — remove ambiguity so two people read it the same way}
+- **Problem:** {the measured pain this attacks — restate the Finding's metric}.
 
-**Problem:** {the measured pain this attacks — restate the Finding's metric}.
+**Agentic workflow + SDLC / VSM integration:**
 
-| Before | After |
-|--------|-------|
-| {current behaviour} | {target behaviour} |
+> Describe the agentic workflow *and* where it sits on the value stream. A reviewer should see both the agent pattern and the process change on the map — not just a tool list.
 
-**Recommended AI workflow pattern:**
+1. **Agent pattern** — how the agents collaborate (e.g. chained skills with human gates, read-only verifier subagent, rule-enforced command order, log-triage subagent, diff advisory). Name roles, handoffs, and mandatory human gates.
+2. **Station / process step** — which `states[]` station(s) this changes, and which activities / gates / transitions it replaces, shrinks, or adds.
+3. **Who · when · trigger** — who invokes it (dev, reviewer, CI), when in the SDLC it runs, and what starts it (PR open, failing check, story start, on-demand).
+4. **Value-stream effect** — expected change on the map (e.g. lower PT at gate X, fewer "reason: Manual" waits, fail feedback earlier). Tie back to the Finding's metric.
 
-- e.g. chained skills w/ human gates
-- read-only verifier subagent
-- rule-enforced command order
-- log-triage subagent
-- diff advisory
-
-> Name the pattern; describe the concrete steps or command chain if useful. Keep humans in the loop where risk is real.
+```text
+{trigger} → {agent / skill chain} → {human gate?} → {output} · on station {name}
+```
 
 **Required context**
 

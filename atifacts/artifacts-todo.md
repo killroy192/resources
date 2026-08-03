@@ -118,14 +118,14 @@ Work through each artifact top to bottom. Check off each box as you complete it.
   - [ ] Impact rating (S/M/L)
   - [ ] Risk rating (S/M/L)
   - [ ] Effort rating (S/M/L)
-  - [ ] Recommended AI workflow pattern
+  - [ ] Agentic workflow + SDLC / VSM integration (agent pattern, station/process step, who·when·trigger, value-stream effect) 
   - [ ] Required context (what the AI needs to know)
   - [ ] Verification approach (AC → test / manual step, metric baseline → target, mandatory human gate)
 - [ ] Prioritize the use cases into a ranked backlog
   - [ ] Order by Impact · Risk · Effort (high impact + low risk + low effort first)
   - [ ] Give each a measurable "Done when…" exit criterion
   - [ ] Sequence dependencies explicitly (no gate enabled before its prerequisite)
-  - [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact5-ai-use-cases/**.md` as a basic example (modify according your needs)
+- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact5-ai-use-cases/**.md` as a basic example (modify according your needs)
 
 ### Self-check before submitting
 
@@ -133,9 +133,8 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 - [ ] Does every Finding cite a real metric from the JSON (no invented numbers; unmeasured labelled "not measured")?
 - [ ] Does every Finding map to exactly one station and at least one use case?
 - [ ] Is the impact / risk / effort scoring reasoned, not arbitrary?
-- [ ] Does the chosen workflow pattern fit each use case?
+- [ ] Does every use case spell out the agentic workflow *and* how it plugs into a station on the VSM (not just a tool list)?
 - [ ] Does every use case have Impact · Risk · Effort and a verifiable "Done when"?
-- [ ] Does the value stream map (SDLC.json) show real process integration?
 - [ ] Does prioritisation respect dependencies (no gate enabled before its prerequisite)?
 - [ ] Are the next steps actionable and prioritized?
 
@@ -149,8 +148,9 @@ After your five artifacts are done, record a **~10-minute screen walkthrough**. 
 
 ### Structure (10 minutes)
 
-- [ ] **0:00–2:00 · Artifact 1 — your AI toolkit.** Open your repo and show your tools. For each: what it does and when it's used. Skills/commands ("handles X, I invoke it when…"), rules ("runs passively whenever the agent touches [area]"), AGENTS.md (open it, point out 2–3 things and why the agent needs them).
-- [ ] **2:00–4:00 · Artifact 2 — agents.** Show your agent/sub-agent setup: read the title line, show the chain if it calls others, show one example running (screenshot, formatted chat log, or quick live demo).
+- [ ] **0:00–1:00 · Intro and working solution demo** Briefly explain feature you've worked on and demonstrate working functionality.
+- [ ] **1:00–2:30 · Artifact 1 — your AI toolkit.** Open your repo and show your tools. For each: what it does and when it's used. Skills/commands ("handles X, I invoke it when…"), rules ("runs passively whenever the agent touches [area]"), AGENTS.md (open it, point out 2–3 things and why the agent needs them).
+- [ ] **2:30–4:00 · Artifact 2 — agents.** Show your agent/sub-agent setup: read the title line, show the chain if it calls others, show one example running (screenshot, formatted chat log, or quick live demo).
 - [ ] **4:00–6:00 · Artifact 3 — agentic workflow (the main one).** Show the evidence chain: spec (business problem + what "done" looks like), plan (steps, TDD checkpoints / human approval gates), context package (hot/warm/cold if you have a context map), checks & review (one verification output — what you kept, what you fixed). **Connect back to Artifact 1** — point to where your tools actually showed up.
 - [ ] **6:00–7:30 · Artifact 4 — the deliverable (actual code).** Show it running or ready to merge: the PR/diff, tests passing (screenshot is fine), release notes + rollback plan (one sentence each on risk and rollback).
 - [ ] **7:30–9:30 · Artifact 5 — AI in your SDLC.** Walk your 5 use cases fast, one sentence each. Call out any case where AI improves something *other* than writing code, or where you use AI to build a deterministic tool you later remove AI from.

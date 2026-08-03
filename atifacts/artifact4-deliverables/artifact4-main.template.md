@@ -8,15 +8,14 @@
 
 > One-row map of the deliverable so a reviewer can find each piece fast.
 
-| Item | Location / link |
-|------|-----------------|
-| PR | `{PR link}` |
-| Demo / deployment note | `{link}` |
-| Verification | `{path}` |
-| Review notes | `{path}` |
-| Release notes | `{path}` |
-| Chat logs | `{path}` |
-| Final decision | {Merge / Deployable / Blocked} |
+| Item | Location / link | Location / link example |
+|------|-----------------|-------------------------|
+| PR / deployment note | `{link}` | `https://gitlab-pr.com` |
+| Verification | `{path}` | `./verification.md` |
+| Review notes | `{path}` | `./review.md` |
+| Release notes | `{path}` | `./release.md` |
+| Chat logs | `{path}` | `./release-chat-logs.md`, `./review-chat-logs.md` |
+| Final decision | {Merge / Deployable / Blocked} | not applicable |
 
 ---
 
@@ -27,6 +26,8 @@
 | AC / behaviour | Proof (test name / manual step) | Result |
 |----------------|--------------------------------|--------|
 | {AC-1} | {evidence} | {pass / gap} |
+| {AC-2} | `https://gitlab.com/ci-pipeline-green` | pass |
+| {AC-3} | `./manual-qa-on-dev-environment.md4` | pass |
 
 - **Automated checks:** `{CI link / command + output location}`
 - **Manual QA:** {what was checked by hand, and result}

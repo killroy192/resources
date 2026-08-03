@@ -8,21 +8,23 @@
 
 > Quick map of every tool in this artifact so a reviewer (or the demo video) can find each one fast. Fill one row per file.
 
-| Tool | Type | Location |
-|------|------|----------|
-| {name} | Rule | `.cursor/rules/{name}.mdc` |
-| {name} | AGENTS.md | `AGENTS.md` |
-| {name} | Skill | `.cursor/skills/{name}/SKILL.md` |
+| Tool | Type | Location | Location Example |
+|------|------|----------|------------------|
+| {name} | Rule | {path} |`./rules/{name}.mdc` |
+| {name} | AGENTS.md | {path} |`./AGENTS.md` |
+| {name} | Skill | {path} |`./skills/{name}/SKILL.md` |
 
 ---
 
-## 1. Rules (`.cursor/rules/*.mdc`)
+## 1. Rules (`./rules/*.mdc`)
 
 ### {rule-name}.mdc
 
 - Why we need this rule
 - Why we avoided adding more to this rule
 - Why not put it into Agent.md or skill.
+
+> Repeat if you have more than one rule.
 
 ---
 
@@ -35,7 +37,7 @@
 
 ---
 
-## 3. Skill(s) (`.cursor/skills/{name}/SKILL.md`)
+## 3. Skill(s) (`./skills/{name}/SKILL.md`)
 
 ### {skill-name}
 

@@ -8,10 +8,10 @@
 
 > Quick map of what you built — at least one row for a subagent and one for an MCP integration.
 
-| Deliverable | Type | Location | Solves | Used when |
-|-------------|------|----------|--------|-----------|
-| {name} | Subagent | `.cursor/agents/{name}.md` | {problem} | {trigger} |
-| {name} | MCP integration | `.cursor/mcp.json` | {problem} | {trigger} |
+| Deliverable | Type | Location | Location Example | Solves | Used when |
+|-------------|------|----------|----------|--------|-----------|
+| {name} | Subagent | {path} | `./agents/{name}.md` | {problem} | {trigger} |
+| {name} | MCP integration | {path} | `./mcp/mcp.json` | {problem} | {trigger} |
 
 ---
 
@@ -31,12 +31,11 @@
 
 ### Evidence
 
-| Item | Link / path |
+| Item | Path |
 |------|-------------|
-| Config file | `.cursor/agents/{name}.md` |
-| Chat log / transcript | `./transcript.md` |
-| Refusal log (demo named forbidden action + what it does instead)​ | `./refusal.md` |
-| Demo output | `{link}` |
+| Config file | `./agents/{name}.md` |
+| Chat log / transcript | `./agents/{name}.transcript.md` |
+| Refusal log (demo named forbidden action + what it does instead)​ | `./agents/{name}.refusal-log.md` |
 
 ---
 
@@ -58,6 +57,7 @@
 
 | Item | Link / path |
 |------|-------------|
-| Config file | `.cursor/mcp.json` |
-| Chat log / transcript | `./transcript.md` |
-| Demo output | `{link}` |
+| Config file | `./mcp/mcp.json` |
+| Chat log / transcript | `./mcp/transcript.md` |
+| Refusal log (demo named forbidden action + what it does instead)​ | `./mcp/refusal-log.md` |
+
