@@ -11,7 +11,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 - [ ] Create a `.cursor/rules` file (or `.cursor/rules/*.mdc` files) with project rules
 - [ ] Create `AGENTS.md` (or equivalent project guidance)
 - [ ] Create at least one `SKILL.md` describing a repeatable workflow
-- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact1-tools/artifact.basic.template.md` as a basic example (modify according your needs)
+- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact1-tools/artifact1-main.template.md` as a basic example (modify according your needs)
 
 ### Self-check before submitting
 
@@ -29,7 +29,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 
 - [ ] Pick a **real workflow problem** (not a demo for demo's sake)
 - [ ] Build one custom subagent and MCP integration for it
-- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact2-mcp-subagents/artifact.basic.template.md` as a basic example (modify according your needs)
+- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact2-mcp-subagents/artifact2-main.template.md` as a basic example (modify according your needs)
 
 ### Self-check before submitting
 
@@ -55,7 +55,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 - [ ] Implement the change and verify it locally
 - [ ] Collect verification evidence: tie each AC to proof (test name / manual step), collected locally
 - [ ] Export/save the chat logs from the spec and plan sessions
-- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact3-workflow/artifact.basic.template.md` as a basic example (modify according your needs)
+- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact3-workflow/artifact3-main.template.md` as a basic example (modify according your needs)
 
 ### Self-check before submitting
 
@@ -81,7 +81,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 - [ ] Document known risks and limitations
 - [ ] Record the final merge or deployability decision
 - [ ] Export/save the chat logs
-- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact4-deliverables/artifact.basic.template.md` as a basic example (modify according your needs)
+- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact4-deliverables/artifact4-main.template.md` as a basic example (modify according your needs)
 
 ### Self-check before submitting
 
