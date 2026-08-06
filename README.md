@@ -16,9 +16,9 @@ Task / Work Item
 → Plan
 → Context
 → Team Toolset
+→ MCP / Subagents
 → Verification
 → Safe Refactoring
-→ MCP / Subagents
 → Release Readiness
 → Review & Merge Decision
 ```
@@ -46,9 +46,9 @@ Each masterclass reveals the next engineering problem and adds evidence toward s
 | MK2 | Plan Mode & Controlled Implementation | Plan Mode can't invent missing business context. You improve the planning input, review the plan, cut scope creep, and approve only the first safe step. | Artifact 3, 4 |
 | MK3 | Context Engineering: Hot / Warm / Cold Layers | A bug in an unfamiliar area — you build a reviewable context map instead of dumping everything in. | Artifact 3, 5 |
 | MK4 | Cursor Team Toolset: Rules, AGENTS.md, Skills & Commands | The same guidance is retyped in every chat — you convert stable context into reusable project-level configuration. | Artifact 1 |
-| MK5 | Verification-First Development with Lightweight Eval Rubrics | "Looks correct" isn't enough — you map acceptance criteria to proof and gate on evidence. | Artifact 3, 4 |
-| MK6 | Safe Refactoring, Architecture & Migration Work | A refactor request — you classify the work, lock current behavior, stage it, and approve only the first safe step. | Artifact 3, 4 |
-| MK7 | MCP & Subagents in Cursor | Manual copying of Jira/GitHub/logs — you choose CLI vs API vs MCP vs Subagent and build one bounded, safe capability. | Artifact 2 |
+| MK5 | MCP & Subagents in Cursor | Manual copying of Jira/GitHub/logs — you choose CLI vs API vs MCP vs Subagent and build one bounded, safe capability. | Artifact 2 |
+| MK6 | Verification-First Development with Lightweight Eval Rubrics | "Looks correct" isn't enough — you map acceptance criteria to proof and gate on evidence. | Artifact 3, 4 |
+| MK7 | Safe Refactoring, Architecture & Migration Work | A refactor request — you classify the work, lock current behavior, stage it, and approve only the first safe step. | Artifact 3, 4 |
 | MK8 | Safe Release for AI-Generated Code | Green checks aren't release readiness — you prepare observability, failure modes, flag decision, and rollback. | Artifact 4 (+ Artifact 5) |
 | MK9 | AI-Assisted Code Review & Production-Ready PR | "Tests are green — can we merge?" — you review the evidence package, classify findings, and apply an explicit, human-owned merge decision. | Artifact 3, 4 |
 
