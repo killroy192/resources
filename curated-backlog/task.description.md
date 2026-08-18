@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Between masterclass sessions, each mentee picks work from their own project and gets mentor approval before starting. The backlog is **one required primary task** plus **one optional** task (typically MCP / subagent) — enough to run the full agentic workflow (story → AI-ready spec → plan → context → implementation → verification → PR / release readiness).
+Between masterclass sessions, each mentee picks work from their own project and gets mentor approval before starting. The backlog is **one required task** — enough to run the full agentic workflow (story → AI-ready spec → plan → context → implementation → verification → PR / release readiness).
 
 ## Backlog composition
 
