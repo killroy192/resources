@@ -146,7 +146,7 @@ After your five artifacts are done, record a **~10-minute screen walkthrough**. 
 
 **Record with Teams** (start a meeting with yourself) or any tool that gives an auto-transcript. Don't edit the transcript with an agent — we check.
 
-### Structure (10 minutes)
+### Structure (max 10 minutes)
 
 - [ ] **0:00–1:00 · Intro and working solution demo** Briefly explain feature you've worked on and demonstrate working functionality.
 - [ ] **1:00–2:30 · Artifact 1 — your AI toolkit.** Open your repo and show your tools. For each: what it does and when it's used. Skills/commands ("handles X, I invoke it when…"), rules ("runs passively whenever the agent touches [area]"), AGENTS.md (open it, point out 2–3 things and why the agent needs them).
