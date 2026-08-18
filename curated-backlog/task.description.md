@@ -9,13 +9,12 @@ Between masterclass sessions, each mentee picks work from their own project and 
 | Required | Count | What it is |
 |----------|-------|------------|
 | **Primary task** | **1** | A real Jira (or equivalent) story that can carry Artifact 3 (+ evidence toward 1 and 5) end to end |
-| **Optional second task** | 0–1 | Only if useful — typically MCP / subagent on a real workflow friction (often used *on* the same primary story) |
 
 Mentor reviews and approves task selection and scope **before** work starts.
 
 ---
 
-## 1 · Primary task — what “good enough” looks like in practice
+## Primary task — what “good enough” looks like in practice
 
 **Goal:** One ticket complex enough that coding from the raw Jira text alone is likely to encode the **wrong** business rules or architecture — so a human-reviewed AI-ready spec is mandatory.
 
@@ -72,20 +71,5 @@ Filled-in references (condensed from real submission stories — use as **shape*
 - [`task.example2.md`](./task.example2.md) — license Metrics / SiteMetrics expansion (**LBMH20-386**-shaped)
 
 Also in the same complexity band: hand-written CRUD API with MainApp validation parity (**MFGR10-51092**-shaped). Favorites-only UX (**DIST06-5306**-shaped) can pass if AC/edge cases are solid, but prefer tickets where wrong assumptions are costly.
-
----
-
-## 2 · Optional second task — MCP or custom subagent
-
-Add a second backlog item only for Artifact 2 friction that is not already covered while delivering the primary task.
-
-**Shape that matched submissions:**
-
-- Concrete pain (manual Jira/SQL/Postman copy, pre-PR checklist, schema lookup, …)
-- One bounded capability (MCP **or** subagent), preferably exercised **on the same primary story**
-- Explicit allowed tools, forbidden actions, read/write boundary, human approval gates
-- Prefer read-only unless write is justified
-
-**Do not** invent a second feature for symmetry. Pulling the Jira story / live schema into the primary-task spec via MCP counts — document it on the primary card.
 
 ---
