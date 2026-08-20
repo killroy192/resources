@@ -27,7 +27,7 @@ Current task
 
 ## Workflow
 
-Using the feature name
+Using the feature name:
 
-1. inspect the relevant resources  
-2. produce a context map using [context map template](./contextmap.template.md)
+1. Inspect the relevant resources. 
+2. Produce a context map using [context map template](./contextmap.template.md).
