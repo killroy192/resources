@@ -29,9 +29,9 @@ Use Plan Mode to produce **.md file only** — a structured implementation plan.
 
 ## Workflow
 
-1. Inspect spec for task
+1. Inspect spec for task.
 2. Inspect the relevant parts of the codebase.
 3. Identify the files, modules, and components involved.
 4. Ask only blocking technical questions if something cannot be determined from the codebase or specification. Otherwise, make reasonable assumptions and state them explicitly.
-5. Produce the plan using [plan template](./plan.template.md)
+5. Produce the plan using [plan template](./plan.template.md).
 
