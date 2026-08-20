@@ -1,8 +1,10 @@
 ---
 name: generate-verification-plan
-description: Turns a spec, context map and implementation plan into a structured verification plan. Use when the user asks to create a verification plan
+description: Turns a spec, context map and implementation plan into a structured verification plan. Use when the user asks to create a verification plan.
 disable-model-invocation: true
 ---
+
+# Generate Verification Plan
 
 ## Hard rules
 
@@ -19,7 +21,9 @@ disable-model-invocation: true
 
 ## Output
 
-Verfication plan .md file in `docs` folder
+| Artefact | Default path |
+|----------|----------------|
+| Verfication plan | `docs/<feature-slug>.verfication.md` |
 
 ---
 
