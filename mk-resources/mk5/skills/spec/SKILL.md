@@ -16,7 +16,7 @@ Produce **.md file only** — a structured spec. Another agent uses these to wri
 
 ## Inputs
 
-User story description
+User story description.
 
 ## Outputs
 
@@ -30,8 +30,8 @@ User story description
 
 1. Run a grill-me session to fully understand the task. Ask focused questions until you have enough information about the business goal, current behavior, expected behavior, constraints, edge cases, and any ambiguities. Challenge vague requirements and identify missing information.
 2. Produce a specification using exactly the [spec template](./spec.template.md). The specification should be implementation-agnostic, precise, complete, and suitable for product, engineering, and QA alignment before implementation begins. 
-4. Run subagent to review and critique the spec, list blocking findings. Find:
-  4.1 Blocking questions
-  4.2 Conflicting business context
-  4.3 Risky assumptions
-  4.4 Weak acceptance criteria
+3. Run subagent to review and critique the spec, list blocking findings. Find:
+    - 3.1. Blocking questions.
+    - 3.2. Conflicting business context.
+    - 3.3. Risky assumptions.
+    - 3.4. Weak acceptance criteria.
