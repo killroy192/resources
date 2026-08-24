@@ -41,7 +41,7 @@
 
 ## MCP integration
 
-- **Name:** {subagent name}
+- **Name:** {MCP name}
 - **Problem:** {the real workflow pain this attacks, who hits it / how often}
 - **Why MCP fits:** {why an external tool/service integration is the right shape here}
 - **Server / tools exposed:** {which MCP server + which tools you actually use}
