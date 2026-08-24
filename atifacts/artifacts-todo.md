@@ -27,8 +27,8 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 
 ### To do
 
-- [ ] Pick a **real workflow problem** (not a demo for demo's sake)
-- [ ] Build one custom subagent and MCP integration for it
+- [ ] Choose one or more real workflow problems from your day-to-day work — not something invented just for the demo
+- [ ] Build one custom subagent and one MCP integration that solve those problems (they can each address a different problem)
 - [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact2-mcp-subagents/artifact2-main.template.md` as a basic example (modify according your needs)
 
 ### Self-check before submitting

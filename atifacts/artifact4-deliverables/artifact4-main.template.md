@@ -27,10 +27,10 @@
 |----------------|--------------------------------|--------|
 | {AC-1} | {evidence} | {pass / gap} |
 | {AC-2} | `https://gitlab.com/ci-pipeline-green` | pass |
-| {AC-3} | `./manual-qa-on-dev-environment.md4` | pass |
+| {AC-3} | `https://eci.atlassian.net/browse/TICKET-ID-WITH-AQ-COMMENT` | pass |
 
 - **Automated checks:** `{CI link / command + output location}`
-- **Manual QA:** {what was checked by hand, and result}
+- **Manual QA:** {link to your manual QA notes that demonstrate what was checked by hand and the result}
 
 ---
 
