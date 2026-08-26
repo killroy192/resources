@@ -10,7 +10,7 @@
 
 | Item | Location / link | Location / link example |
 |------|-----------------|-------------------------|
-| PR / deployment note | `{link}` | `https://gitlab-pr.com` |
+| PR | `{link}` | `https://gitlab-pr.com` |
 | Verification | `{path}` | `./verification.md` |
 | Review notes | `{path}` | `./review.md` |
 | Release notes | `{path}` | `./release.md` |
