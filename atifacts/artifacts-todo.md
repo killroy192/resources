@@ -55,7 +55,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 - [ ] Implement the change and verify it locally
 - [ ] Collect verification evidence: tie each AC to proof (test name / manual step), collected locally
 - [ ] Export/save the chat logs from the spec and plan sessions
-- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact3-workflow/artifact3-main.template.md` as a basic example (modify according your needs)
+- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact3-workflow/artifact3-main.template.md` as a basic example (modify according to your needs)
 
 ### Self-check before submitting
 
@@ -72,8 +72,8 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 
 ### To do
 
-- [ ] Produce a working result: PR link, demo link, deployment note or deployability note
-- [ ] Collect verification evidence: tie each AC to proof — automated checks on CI and/or manual QA
+- [ ] Produce a working result: PR link, demo link, deployment note, or deployability note
+- [ ] Collect verification evidence on an environment different from your local environment (automated checks on CI and/or manual QA, etc)
 - [ ] Write review notes: summary, blockers, missing evidence / gaps
 - [ ] Write release notes (what changes for users / operators)
 - [ ] Document risk control: rollback / rollforward plan if something goes wrong on prod
@@ -81,7 +81,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 - [ ] Document known risks and limitations
 - [ ] Record the final merge or deployability decision
 - [ ] Export/save the chat logs
-- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact4-deliverables/artifact4-main.template.md` as a basic example (modify according your needs)
+- [ ] Organize the evidence: clear file locations, working links, tidy structure, see `./artifact4-deliverables/artifact4-main.template.md` as a basic example (modify according to your needs)
 
 ### Self-check before submitting
 
@@ -89,8 +89,8 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 - [ ] Does the verification evidence prove the key behavior?
 - [ ] Is it review-ready: summary, blockers, missing evidence, final decision?
 - [ ] Is it release-ready: notes, observability/flag decision, rollout thinking?
-- [ ] Is rollback / risk control covered?
-- [ ] Was scope kept disciplined and the result maintainable?
+- [ ] Is rollback/risk control covered?
+- [ ] Was the scope kept disciplined and the result maintainable?
 
 ---
 
@@ -99,7 +99,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 ### To do
 
 - [ ] Collect initial data
-  - [ ] Create SDLC (states) for medium-size feature using [elivery-model.engx](https://delivery-model.engx.me/)
+  - [ ] Create SDLC (states) for medium-sized feature using [elivery-model.engx](https://delivery-model.engx.me/)
   - [ ] Describe the steps included in each state.
   - [ ] Add measurements, comments, and gateways for each step.
   - [ ] Save the result as SDLC.json — this is your value stream map and the source of truth for every metric.
