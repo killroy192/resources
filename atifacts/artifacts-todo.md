@@ -73,7 +73,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 ### To do
 
 - [ ] Produce a working result: PR link, demo link, deployment note, or deployability note
-- [ ] Collect verification evidence on an environment different from your local environment (automated checks on CI and/or manual QA, etc)
+- [ ] Collect verification evidence on an environment different from your local environment (automated checks on CI and/or manual QA, night-QA runs, etc)
 - [ ] Write review notes: summary, blockers, missing evidence / gaps
 - [ ] Write release notes (what changes for users / operators)
 - [ ] Document risk control: rollback / rollforward plan if something goes wrong on prod
