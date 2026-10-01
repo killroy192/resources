@@ -13,7 +13,7 @@
 | Story | {original work item} | `{path}` | `./story.md` |
 | Spec | AI-ready spec | `{path}` | `./spec.md` |
 | Spec chat logs | exported session | `{path}` | `./spec-chat-log.md` |
-| Plan | Plan Mode output | `{path}` | `./plan.md` |
+| Plan | Implementation Plan | `{path}` | `./plan.md` |
 | Plan chat logs | exported session | `{path}` | `./plan-chat-log.md` |
 | Context map | hot/warm/cold files | `{path}` | `./context-map.md` |
 | Verification | AC↔evidence table | `{path}` | `./verification.md` |
