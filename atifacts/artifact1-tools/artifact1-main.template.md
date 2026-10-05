@@ -1,6 +1,6 @@
 # Artifact 1 — Project Guidance Setup (Rules · AGENTS.md · Skill)
 
-> Purpose: prove this repo has a reusable AI toolkit — passive rules, always-on project context, and at least one repeatable workflow. Everything here must be reusable, maintainable and shareable, not one-off.
+> Purpose: prove this repo has a reusable AI toolkit — passive rules, always-on project context, and at least one repeatable workflow. Everything here must be reusable, maintainable, and shareable, not one-off.
 
 ---
 
@@ -20,9 +20,9 @@
 
 ### {rule-name}.mdc
 
-- Why we need this rule
+- Why do we need this rule
 - Why we avoided adding more to this rule
-- Why not put it into Agent.md or skill.
+- Why not put it into AGENTS.md or skill.
 
 > Repeat if you have more than one rule.
 
@@ -44,7 +44,7 @@
 - Why we need this skill
 - Why reusable (why this works for many tasks, not just one)
 - Why we avoided adding more to this skill
-- Why not put it into rule or agent.md
+- Why not put it into rule or AGENTS.md
 - Gotchas / non-obvious context
 - Usage explanation
 - Logs of calling skill with agent output
