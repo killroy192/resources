@@ -4,10 +4,6 @@
 
 > Link the input measurements file. Every number in this doc must trace back to it. Empty metric in JSON = "not measured" here, never a guess.
 
-**Metrics window:** `{YYYY-MM-DD → YYYY-MM-DD (~Nd)}` · pulled `{YYYY-MM-DD}`
-
-> Copy from JSON generalInformation.metricsWindow + metricsPulledAt.
-
 **Ratings:** **H** = High · **M** = Medium · **L** = Low — applied to **Impact · Risk · Effort**.
 
 ---
