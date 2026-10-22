@@ -4,7 +4,7 @@
 
 ---
 
-## Traceability chain (at a glance)
+## Traceability chain (at a glance) and Inventory list
 
 > One-row map of the whole chain so a reviewer can follow it fast.
 
