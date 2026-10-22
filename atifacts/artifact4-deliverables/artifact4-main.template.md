@@ -4,7 +4,7 @@
 
 ---
 
-## Working result (at a glance)
+## Working result (at a glance) and Inventory list
 
 > One-row map of the deliverable so a reviewer can find each piece fast.
 
