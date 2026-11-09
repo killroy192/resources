@@ -144,7 +144,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 
 After your five artifacts are done, record a **~10-minute screen walkthrough**. Open your repo, show the files, talk through what you built. No slides, no formal intro — just show the work.
 
-**Record with Teams** (start a meeting with yourself) or any tool that gives an auto-transcript. Don't edit the transcript with an agent — we check.
+**Record with Teams** (start a meeting with yourself) or any tool that gives an auto-transcript.
 
 ### Structure (max 10 minutes)
 
