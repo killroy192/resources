@@ -99,7 +99,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 ### To do
 
 - [ ] Collect initial data
-  - [ ] Create SDLC (states) for medium-sized feature using [elivery-model.engx](https://delivery-model.engx.me/)
+  - [ ] Create SDLC (states) for medium-sized feature using [delivery-model.engx](https://delivery-model.engx.me/)
   - [ ] Describe the steps included in each state.
   - [ ] Add measurements, comments, and gateways for each step.
   - [ ] Save the result as SDLC.json — this is your value stream map and the source of truth for every metric.
