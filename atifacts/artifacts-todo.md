@@ -106,7 +106,7 @@ Work through each artifact top to bottom. Check off each box as you complete it.
 - [ ] Derive Findings from the measured signals in SDLC.json (a Finding = a fact + its consequence, not a use case)
   - [ ] Code each Finding to exactly one station (state) on the map
   - [ ] Cite the exact metric from the JSON as evidence (label unmeasured metrics "not measured", never guess)
-  - [ ] Aim for 3–6 crisp Findings; distinguish "healthy / leave alone" from "fix this"
+  - [ ] Aim for 5–6 crisp Findings; distinguish "healthy / leave alone" from "fix this"
 - [ ] Identify **at least 5** AI-assisted engineering use cases, one per fixable Finding (or cluster)
 - [ ] Make each use case the right shape:
   - [ ] Specific team workflow — not vague like "use AI for tests"
